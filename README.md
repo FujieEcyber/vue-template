@@ -166,6 +166,16 @@ export default {
 </script>
 ```
 
+呼び出した状態をテンプレートに描画
+
+```
+<ul class="website-list">
+  <li v-for="(site,index) in sites">
+    {{ site.name }}
+  </li>
+</ul>
+```
+
 ### ビルド
 
 ```
