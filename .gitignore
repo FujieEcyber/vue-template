@@ -164,4 +164,4 @@ $RECYCLE.BIN/
 # frontend
 node/
 node_modules/
-dist/
+dist/app.js
