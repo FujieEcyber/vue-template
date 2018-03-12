@@ -37,7 +37,7 @@ vue/components/top/Top.vue
 
 vue/components/top/modules/TopWebsite.vue
 
-テンプレートを記述
+#### テンプレートを記述
 
 ```
 <template>
@@ -53,12 +53,39 @@ vue/components/top/modules/TopWebsite.vue
 
 ```
 
-名前を付けてエクスポートする
+#### 名前を付けてエクスポートする
 
 ```
 <script>
 export default {
   name: 'topWebsite'
+}
+</script>
+```
+
+#### Top.vue に作成したコンポーネントを記述
+
+```
+<div>
+  <div class="content-wrap">
+    <main class="main">
+      <TopWebsite></TopWebsite>
+    </main>
+  </div>
+</div>
+```
+
+スクリプト側にコンポーネントのインポートを記載する
+
+```
+<script>
+import TopWebsite from './modules/TopWebsite.vue'
+
+export default {
+  name: 'top',
+  components: {
+    TopWebsite,
+  }
 }
 </script>
 ```
@@ -145,6 +172,7 @@ components/top/modukes/TopWebsite.vue
 
 ```
 <script>
+import TopWebsite from './modules/TopWebsite.vue'
 import { mapGetters,mapActions } from 'vuex'
 
 export default {
